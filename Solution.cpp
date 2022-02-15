@@ -11,7 +11,7 @@ public:
         int occuredOnce = 0;
         int occuredTwice = 0;
 
-        for (int n : nums) {
+        for (const auto& n : nums) {
             occuredOnce = (~occuredTwice) & (occuredOnce ^ n);
             occuredTwice = (~occuredOnce) & (occuredTwice ^ n);
         }
